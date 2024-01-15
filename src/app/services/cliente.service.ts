@@ -12,10 +12,10 @@ export class ClienteService {
   save(cliente: Cliente){
     console.log("Post");
     const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
-    return this.http.post<any>("http://localhost:8080/microservicios-rs/api/cliente/newuser", JSON.stringify(cliente), { headers })
+    return this.http.post<any>("http://34.170.190.65:8080/microservicios-rs/api/cliente/newuser", JSON.stringify(cliente), { headers })
   }
 
   getAll(){
-    return this.http.get<any>("http://localhost:8080/microservicios-rs/api/cliente/all");
+    return this.http.get<any>("http://34.170.190.65:8080/microservicios-rs/api/cliente/all");
   }
 }
